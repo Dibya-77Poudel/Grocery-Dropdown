@@ -13,7 +13,7 @@ const groceries = [
 
 const groceryInput = document.getElementById('groceryInput');
 const dropdownList = document.getElementById('dropdownList');
-const dropdownIcon = document.getElementById('dropdownIcon');
+
 
 function populateDropdown() {
     dropdownList.innerHTML = '';
@@ -37,7 +37,7 @@ function populateDropdown() {
     dropdownIcon.addEventListener('click', populateDropdown);
     
     document.addEventListener('click', (event) => {
-        if (!groceryInput.contains(event.target) && !dropdownList.contains(event.target) && !dropdownIcon.contains(event.target)) {
+        if (!groceryInput.contains(event.target) && !dropdownIcon.contains(event.target)) {
             dropdownList.style.display = 'none';
         }
     });
